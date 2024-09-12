@@ -58,11 +58,11 @@
                     <li>Recommended and consulted with clients on the most appropriate graphic design</li>
                     <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
                     </ul>
-                </div><!-- Edn Resume Item -->
+                </div><!-- End Resume Item -->
             </div>
         </div>
-        <div class="col-md-12 text-center">
-            <button class="btn btn-color rounded-pill " id="" type="">Download Csv</button>
+        <div class="col-md-12 text-center resume">
+            <button class="" id="csv">Download Csv</button>
         </div>
     </div>
 </section><!-- /Resume Section -->
