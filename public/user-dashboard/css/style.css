@@ -10597,7 +10597,7 @@ progress {
 }
 
 .form-control-lg {
-  min-height: 3.175rem;
+  min-height: 2.175rem;
   padding: 0.94rem 1.94rem;
   font-size: 1.25rem;
   border-radius: var(--bs-border-radius-lg);

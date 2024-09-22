@@ -47,15 +47,21 @@
     <li class="nav-item">
       <a class="nav-link" data-bs-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
         <i class="mdi mdi-grid-large menu-icon"></i>
-        <span class="menu-title">Tables</span>
+        <span class="menu-title">About</span>
         <i class="menu-arrow"></i>
       </a>
       <div class="collapse" id="tables">
         <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a class="nav-link" href="/user/table">Basic table</a></li>
+          <li class="nav-item"> <a class="nav-link" href="/about">Basic table</a></li>
+          </li>
+        </ul>
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" href="/about/create">Add</a></li>
           </li>
         </ul>
       </div>
+      <!-- <div class="collapse" id="tables"> -->
+      <!-- </div> -->
     </li>    
     <li class="nav-item">
       <a class="nav-link" data-bs-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
