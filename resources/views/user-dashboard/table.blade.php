@@ -2,7 +2,7 @@
 
 <!-- main panel -->
 @section('content')
-<div class="row">
+<!-- <div class="row">
     <div class="col-lg-12 grid-margin stretch-card">
         <div class="card">
             <div class="card-body">
@@ -57,18 +57,19 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
+@foreach($aboutInfo as $about)
 <section style="">
     <div class="row">
         <div class="col-lg-4">
             <div class="card mb-4">
                 <div class="card-body text-center">
-                    <img src="{{ asset('user-dashboard/images/faces/face1.jpg') }}" alt="avatar"
+                    <img src="{{ asset('storage/uploads/' . $about->image) }}" alt="avatar"
                     class="rounded-circle img-fluid" style="width: 150px;">
-                    <h5 class="my-2">John Smith</h5>
-                    <p class="text-muted mb-1">Full Stack Developer</p>
-                    <p class="text-muted ">Bay Area, San Francisco, CA</p>
+                    <h5 class="my-2">{{ $about->userId }}</h5>
+                    <p class="text-muted mb-1">{{ $about->profile }}</p>
+                    <p class="text-muted ">{{ $about->address }}</p>
                 </div>
             </div>
         </div>
@@ -80,7 +81,16 @@
                     <p class="mb-0">Full Name</p>
                 </div>
                 <div class="col-sm-9">
-                    <p class="text-muted mb-0">Johnatan Smith</p>
+                    <p class="text-muted mb-0">{{ $about->userId }}</p>
+                </div>
+                </div>
+                <hr>
+                <div class="row">
+                <div class="col-sm-3">
+                    <p class="mb-0">Profile</p>
+                </div>
+                <div class="col-sm-9">
+                    <p class="text-muted mb-0">{{ $about->profile }}</p>
                 </div>
                 </div>
                 <hr>
@@ -98,25 +108,16 @@
                     <p class="mb-0">Phone</p>
                 </div>
                 <div class="col-sm-9">
-                    <p class="text-muted mb-0">(097) 234-5678</p>
+                    <p class="text-muted mb-0">{{ $about->phone }}</p>
                 </div>
                 </div>
                 <hr>
                 <div class="row">
                 <div class="col-sm-3">
-                    <p class="mb-0">Mobile</p>
+                    <p class="mb-0">About</p>
                 </div>
                 <div class="col-sm-9">
-                    <p class="text-muted mb-0">(098) 765-4321</p>
-                </div>
-                </div>
-                <hr>
-                <div class="row">
-                <div class="col-sm-3">
-                    <p class="mb-0">Address</p>
-                </div>
-                <div class="col-sm-9">
-                    <p class="text-muted mb-0">Bay Area, San Francisco, CA</p>
+                    <p class="text-muted mb-0">{{ $about->about }}</p>
                 </div>
                 </div>
             </div>
@@ -124,5 +125,6 @@
         </div>
   </div>
 </section>
+@endforeach
 @endsection
 <!-- main panel ends-->          

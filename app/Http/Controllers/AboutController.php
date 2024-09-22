@@ -58,6 +58,6 @@ class AboutController extends Controller
         ]);
  
         //  About::create($request->all());
-         return redirect()->url('/user/home')->with('success', 'Record created successfully.');
+         return redirect()->route('/about')->with('success', 'Record created successfully.');
      }
 }
