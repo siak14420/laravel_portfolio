@@ -60,70 +60,89 @@
 </div> -->
 
 @foreach($aboutInfo as $about)
-<section style="">
-    <div class="row">
-        <div class="col-lg-4">
-            <div class="card mb-4">
-                <div class="card-body text-center">
-                    <img src="{{ asset('storage/uploads/' . $about->image) }}" alt="avatar"
-                    class="rounded-circle img-fluid" style="width: 150px;">
-                    <h5 class="my-2">{{ $about->userId }}</h5>
-                    <p class="text-muted mb-1">{{ $about->profile }}</p>
-                    <p class="text-muted ">{{ $about->address }}</p>
+<section class="container mt-4">
+    <div class="card shadow border-0 mb-4">
+        <!-- Profile Section Heading Inside the Card -->
+        <div class="card-header text-start bg-light">
+            <h4 class="fw-bold mb-0">User Profile</h2>
+        </div>
+
+        <div class="row g-0">
+            <!-- Profile Image -->
+            <div class="col-lg-4 text-center py-4">
+                <img src="{{ asset('storage/uploads/' . $about->image) }}" alt="avatar"
+                class="rounded-circle img-fluid mb-3" style="width: 150px; height: 140px;">
+                <h5 class="card-title mb-2">{{ $about->userId }}</h5>
+                <p class="text-muted mb-1">{{ $about->profile }}</p>
+                <p class="text-muted">{{ $about->address }}</p>
+
+                <!-- Social Icons -->
+                <div class="mt-3">
+                    <a href="https://facebook.com" class="text-decoration-none me-3" target="_blank">
+                    <i class="fa fa-facebook fa-2x text-primary"></i>
+                    </a>
+                    <a href="https://facebook.com" class="text-decoration-none me-3" target="_blank">
+                    <i class="fa fa-facebook fa-2x text-primary"></i>
+                    </a>
+                    <a href="https://facebook.com" class="text-decoration-none me-3" target="_blank">
+                    <i class="fa fa-facebook fa-2x text-primary"></i>
+                    </a>
+                    <a href="https://github.com" class="text-decoration-none" target="_blank">
+                        <i class="fa fa-github fa-2x text-dark"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- Profile Details -->
+            <div class="col-lg-8">
+                <div class="card-body">
+                    <div class="row mb-3">
+                        <div class="col-sm-3">
+                            <p class="mb-0 fw-bold">Full Name</p>
+                        </div>
+                        <div class="col-sm-9">
+                            <p class="text-muted mb-0">{{ $about->userId }}</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row mb-3">
+                        <div class="col-sm-3">
+                            <p class="mb-0 fw-bold">Profile</p>
+                        </div>
+                        <div class="col-sm-9">
+                            <p class="text-muted mb-0">{{ $about->profile ? $about->profile : "--" }}</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row mb-3">
+                        <div class="col-sm-3">
+                            <p class="mb-0 fw-bold">Email</p>
+                        </div>
+                        <div class="col-sm-9">
+                            <p class="text-muted mb-0">example@example.com</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row mb-3">
+                        <div class="col-sm-3">
+                            <p class="mb-0 fw-bold">Phone</p>
+                        </div>
+                        <div class="col-sm-9">
+                            <p class="text-muted mb-0">{{ $about->phone ? $about->phone : "--" }}</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row mb-3">
+                        <div class="col-sm-3">
+                            <p class="mb-0 fw-bold">About</p>
+                        </div>
+                        <div class="col-sm-9">
+                        <p class="text-muted mb-0">{{ $about->about ? $about->about : '--' }}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-lg-8">
-            <div class="card mb-4">
-            <div class="card-body">
-                <div class="row">
-                <div class="col-sm-3">
-                    <p class="mb-0">Full Name</p>
-                </div>
-                <div class="col-sm-9">
-                    <p class="text-muted mb-0">{{ $about->userId }}</p>
-                </div>
-                </div>
-                <hr>
-                <div class="row">
-                <div class="col-sm-3">
-                    <p class="mb-0">Profile</p>
-                </div>
-                <div class="col-sm-9">
-                    <p class="text-muted mb-0">{{ $about->profile }}</p>
-                </div>
-                </div>
-                <hr>
-                <div class="row">
-                <div class="col-sm-3">
-                    <p class="mb-0">Email</p>
-                </div>
-                <div class="col-sm-9">
-                    <p class="text-muted mb-0">example@example.com</p>
-                </div>
-                </div>
-                <hr>
-                <div class="row">
-                <div class="col-sm-3">
-                    <p class="mb-0">Phone</p>
-                </div>
-                <div class="col-sm-9">
-                    <p class="text-muted mb-0">{{ $about->phone }}</p>
-                </div>
-                </div>
-                <hr>
-                <div class="row">
-                <div class="col-sm-3">
-                    <p class="mb-0">About</p>
-                </div>
-                <div class="col-sm-9">
-                    <p class="text-muted mb-0">{{ $about->about }}</p>
-                </div>
-                </div>
-            </div>
-            </div>
-        </div>
-  </div>
+    </div>
 </section>
 @endforeach
 @endsection

@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="{{ asset('user-dashboard/css/style.css') }}">
   <!-- endinject -->
   <link rel="shortcut icon" href="{{ asset('user-dashboard/images/favicon.ico') }}" />
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="{{ asset('user-dashboard/vendors/font-awesome/css/font-awesome.min.css') }}"/>
 </head>
 <body>
   <div class="container-scroller">

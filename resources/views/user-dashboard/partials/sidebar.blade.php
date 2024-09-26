@@ -1,6 +1,6 @@
 <ul class="nav">
     <li class="nav-item">
-      <a class="nav-link" href="/user/home">
+      <a class="nav-link" href="/dashboard">
         <i class="mdi mdi-home menu-icon"></i>
         <span class="menu-title">Dashboard</span>
       </a>
@@ -52,7 +52,7 @@
       </a>
       <div class="collapse" id="tables">
         <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a class="nav-link" href="/about">Basic table</a></li>
+          <li class="nav-item"> <a class="nav-link" href="/about">About</a></li>
           </li>
         </ul>
         <ul class="nav flex-column sub-menu">

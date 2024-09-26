@@ -14,8 +14,7 @@ class AboutController extends Controller
      */
      public function index()
      {
-        //  $aboutInfo = About::where('userId', auth()->id())->get();
-         $aboutInfo = About::where('userId', 2)->get();
+         $aboutInfo = About::where('userId', auth()->id())->get();
          return view('user-dashboard.table', compact('aboutInfo'));
      }
  
@@ -58,6 +57,6 @@ class AboutController extends Controller
         ]);
  
         //  About::create($request->all());
-         return redirect()->route('/about')->with('success', 'Record created successfully.');
+         return redirect()->route('about.index')->with('success', 'Record created successfully.');
      }
 }
