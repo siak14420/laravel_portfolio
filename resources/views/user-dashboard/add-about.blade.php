@@ -58,7 +58,7 @@
           </div>
           <div class="form-group col-6">
             <label for="exampleInputEmail3">Github</label>
-            <input type="text" class="form-control form-control-lg" id="exampleInputEmail3" name="githubId" placeholder="Gituhb Id">
+            <input type="text" class="form-control form-control-lg" id="exampleInputEmail3" name="githubId" placeholder="Github Id">
           </div>
         </div>
         <div class="text-end">

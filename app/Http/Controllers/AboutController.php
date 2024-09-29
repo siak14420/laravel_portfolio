@@ -15,7 +15,8 @@ class AboutController extends Controller
      public function index()
      {
          $aboutInfo = About::where('userId', auth()->id())->get();
-         return view('user-dashboard.table', compact('aboutInfo'));
+         $user = auth()->user();
+         return view('user-dashboard.about', compact('aboutInfo', 'user'));
      }
  
      /* 
@@ -59,4 +60,12 @@ class AboutController extends Controller
         //  About::create($request->all());
          return redirect()->route('about.index')->with('success', 'Record created successfully.');
      }
+
+     
+    /* 
+     *  Update a newly created resource(about) in storage.
+     */
+    public function update(Request $request){
+        dd($request);
+    }
 }

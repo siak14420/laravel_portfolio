@@ -25880,3 +25880,45 @@ dl li {
   border-bottom: none;
 }
 /*# sourceMappingURL=maps/style.css.map */
+
+.text-purple {
+  color : #ac2bac;
+}
+
+.custom-tooltip {
+  position: relative;
+  cursor: pointer;
+}
+
+.custom-tooltip::after {
+  content: attr(data-tooltip);  /* Use the custom data attribute */
+  position: absolute;
+  top: 30px;  /* Show above the icon */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;  /* Change to your desired font family */
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.custom-tooltip:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.editInput{
+  margin: 0 auto; /* Centers input fields */
+  max-width: 300px;
+  border: 2px solid #ccc;
+}
+
+.editInputborder{
+  border: 2px solid #ccc;
+}

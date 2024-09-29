@@ -18,6 +18,7 @@
   <!-- endinject -->
   <link rel="shortcut icon" href="{{ asset('user-dashboard/images/favicon.ico') }}" />
   <!-- fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="{{ asset('user-dashboard/vendors/font-awesome/css/font-awesome.min.css') }}"/>
 </head>
 <body>
@@ -48,7 +49,7 @@
     <div class="container-fluid page-body-wrapper">      
       <!-- partial:partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
-       @include('user-dashboard.partials.sidebar')
+       @include('user-dashboard.partials.sidebar',['about' => $about ?? null])
       </nav>
       <!-- partial -->
       <div class="main-panel">

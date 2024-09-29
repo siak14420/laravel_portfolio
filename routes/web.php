@@ -37,7 +37,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     // Define routes for the about table and controller
-    Route::resource('about', AboutController::class)->only(['index', 'create', 'store']);
+    Route::resource('about', AboutController::class)->only(['index', 'create', 'store', 'update']);
 });
 
 
