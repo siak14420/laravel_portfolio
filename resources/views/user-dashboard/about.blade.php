@@ -66,7 +66,7 @@
             <!-- Profile Section Heading Inside the Card -->
             <div class="card-header text-start bg-light d-flex justify-content-between align-items-center">
                 <h4 class="fw-bold mb-0">User Profile</h2>
-                <!-- <button class="btn btn-primary" id="editButton">Edit Profile</button> -->
+                <!-- <button class="btn btn-primary" id="editIcon">Edit Profile</button> -->
                 <i class="fa-solid fa-pen-to-square" id="editIcon" style="cursor: pointer;"></i>
             </div>
 
@@ -75,19 +75,18 @@
                 <div class="col-lg-4 text-center py-4">
                 <div class="profile-container">
                         <img src="{{ asset('storage/uploads/' . $about->image) }}" alt="avatar"
-                        class="rounded-circle img-fluid mb-3" style="width: 150px; height: 130px;">
+                        class="rounded-circle img-fluid mb-3" style="width: 150px; height: 150px;">
                     <!-- Hidden File Input for image upload -->
                         <input type="file" id="profileImageInput" class="form-control form-control editInput mb-2" style="display: none;">
                     </div>
-                    <h5 class="" id="userNameDisplay">{{ $user->name ? $user->name : "--" }}</h5>
+                    <!-- <h5 class="" id="userNameDisplay">{{ $user->name ? $user->name : "--" }}</h5>
                     <input type="text" class="form-control form-control-sm editInput" id="userNameInput" value="{{ $user->name ? $user->name : '' }}" style="display: none;">
 
                     <p class="text-muted mb-1" id="profileDisplay">{{ $about->profile ? $about->profile : "--" }}</p>
-                    <input type="text" id="profileInput" class="form-control form-control-sm editInput mt-2 mb-2" value="{{ $about->profile ? $about->profile : '' }}" style="display: none;">
+                    <input type="text" id="profileInput" class="form-control form-control-sm editInput mt-2 mb-2" value="{{ $about->profile ? $about->profile : '' }}" style="display: none;"> -->
 
-                    <p class="text-muted" id="addressDisplay">{{ $about->address ? $about->address : "--" }}</p>
-                    <textarea type="text" id="addressInput" class="form-control form-control-sm editInput" style="display: none;">{{ $about->address ? $about->address : "--" }}</textarea>
-
+                    <p class="text-muted mb-2" id="aboutDisplay">{{ $about->about ? $about->about : '--' }}</p>
+                    <textarea class="form-control form-control-sm editInput mt-2 mb-2" id="aboutInput" name="address" rows="2"style="display: none;">{{ $about->about ? $about->about : '' }}</textarea>
                     <!-- Social Icons -->
                     <div class="mt-2">
                         @if($about->xId)
@@ -161,11 +160,11 @@
                         <hr>
                         <div class="row mb-3">
                             <div class="col-sm-3">
-                                <p class="mb-0 fw-bold">About</p>
+                                <p class="mb-0 fw-bold">Address</p>
                             </div>
                             <div class="col-sm-9">
-                            <p class="text-muted mb-0" id="aboutDisplay">{{ $about->about ? $about->about : '--' }}</p>
-                            <textarea class="form-control form-control-sm editInputborder" id="aboutInput" name="address" rows="4"style="display: none;">{{ $about->about ? $about->about : '' }}</textarea>
+                            <p class="text-muted" id="addressDisplay">{{ $about->address ? $about->address : "--" }}</p>
+                            <textarea type="text" id="addressInput" class="form-control form-control-sm editInputborder" style="display: none;">{{ $about->address ? $about->address : "--" }}</textarea>
                             </div>
                         </div>
                     </div>
