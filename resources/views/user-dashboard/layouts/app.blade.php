@@ -6,6 +6,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Majestic Admin Pro</title>
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+
   <!-- plugins:css -->
   <link rel="stylesheet" href="{{ asset('user-dashboard/vendors/mdi/css/materialdesignicons.min.css') }}">
   <link rel="stylesheet" href="{{ asset('user-dashboard/vendors/css/vendor.bundle.base.css') }}">
@@ -86,7 +88,7 @@
   <!-- endinject -->
   <!-- Custom js for this page-->
   <script src="{{ asset('user-dashboard/js/dashboard.js') }}"></script>
-    <script src="{{ asset('user-dashboard/js/proBanner.js') }}"></script>
+  <!-- <script src="{{ asset('user-dashboard/js/proBanner.js') }}"></script> -->
 
   <!-- End custom js for this page-->
   <script src="{{ asset('user-dashboard/js/jquery.cookie.js') }}" type="text/javascript"></script>

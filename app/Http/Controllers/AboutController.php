@@ -32,8 +32,7 @@ class AboutController extends Controller
      */
      public function store(Request $request)
      {
-        $userId = 2;
-
+        $userId = auth()->id();
         $filename = null; 
 
         // Store the file
@@ -65,7 +64,40 @@ class AboutController extends Controller
     /* 
      *  Update a newly created resource(about) in storage.
      */
-    public function update(Request $request){
-        dd($request);
+    public function update(Request $request, $id)
+    {
+        // Step 4: Find the record to update
+        $about = About::findOrFail($id);
+        // Handle file upload (optional)
+        $filename = null; 
+
+        // Store the file
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $file->storeAs('public/uploads', $filename);
+        } else {
+            $filename = $about->image; // Retain the old image if no new one is uploaded
+        }
+
+        // Step 5: Update the record
+        $about->update([
+            'profile' => $request->profile,
+            'phone' => $request->phone,
+            'image' => $filename, 
+            'about' => $request->about, 
+            'address' => $request->address, 
+            'xId' => $request->xId, 
+            'facebookId' => $request->facebookId, 
+            'instagramId' => $request->instagramId, 
+            'linkedInId' => $request->linkedInId, 
+            'githubId' => $request->githubId, 
+        ]);
+
+        // Step 6: Return a response
+        return response()->json([
+            'message' => 'About updated successfully!',
+            'about' => $about
+        ], 200);    
     }
 }

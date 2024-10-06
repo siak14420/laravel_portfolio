@@ -16,10 +16,10 @@ class About extends Model
         'image',
         'about',
         'address',
-        'twitterId',
+        'xId',
         'facebookId',
+        'instagramId',
         'linkedInId',
         'githubId',
-
     ];
 }
