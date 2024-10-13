@@ -66,12 +66,15 @@
     <li class="nav-item">
       <a class="nav-link" data-bs-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
         <i class="mdi mdi-emoticon menu-icon"></i>
-        <span class="menu-title">Icons</span>
+        <span class="menu-title">Services</span>
         <i class="menu-arrow"></i>
       </a>
       <div class="collapse" id="icons">
         <ul class="nav flex-column sub-menu">          
-          <li class="nav-item"> <a class="nav-link" href="pages/icons/font-awesome.html">Font Awesome</a></li>                              
+          <li class="nav-item"> <a class="nav-link" href="pages/icons/font-awesome.html">Services</a></li>                              
+        </ul>
+        <ul class="nav flex-column sub-menu">          
+          <li class="nav-item"> <a class="nav-link" href="pages/icons/font-awesome.html">Add Services</a></li>                              
         </ul>
       </div>
     </li>    

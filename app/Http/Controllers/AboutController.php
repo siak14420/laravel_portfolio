@@ -31,8 +31,9 @@ class AboutController extends Controller
      *  Store a newly created resource(about) in storage.
      */
      public function store(Request $request)
-     {
+     {        
         $userId = auth()->id();
+
         $filename = null; 
 
         // Store the file
@@ -44,20 +45,21 @@ class AboutController extends Controller
         }
 
         About::create([
-            'userId' => $userId,
-            'profile' => $request->input('profile'),
-            'phone' => $request->input('phone'),
-            'image' => $filename,
-            'about' => $request->input('about'),
-            'address' => $request->input('address'),
-            'xId' => $request->input('twitterId'),
-            'facebookId' => $request->input('facebookId'),
-            'linkedInId' => $request->input('linkedInId'),
-            'githubId' => $request->input('githubId'),
-        ]);
+                    'userId' => $userId,
+                    'profile' => $request->input('profile'),
+                    'phone' => $request->input('phone'),
+                    'image' => $filename,
+                    'about' => $request->input('about'),
+                    'address' => $request->input('address'),
+                    'xId' => $request->input('twitterId'),
+                    'facebookId' => $request->input('facebookId'),
+                    'linkedInId' => $request->input('linkedInId'),
+                    'githubId' => $request->input('githubId'),
+                ]);
  
-        //  About::create($request->all());
-         return redirect()->route('about.index')->with('success', 'Record created successfully.');
+        //  About::create($data);
+        //  return redirect()->route('about.index')->with('success', 'About has been created successfully.');
+        return redirect()->route('about.index')->with('success', 'About has been created successfully.');
      }
 
      

@@ -60,6 +60,12 @@ $(document).ready(function() {
                     $('#profileDisplay').toggle();
                     $('#profileInput').toggle();
                     $('#editIcon').toggleClass('fa-times fa-pen-to-square');
+                    toastr.options = {
+                        "progressBar": true
+                    };
+                    toastr.success('About has been updated successfully.');
+
+
 
                 },
                 error: function(xhr) {
