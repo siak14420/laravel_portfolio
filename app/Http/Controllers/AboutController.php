@@ -59,6 +59,7 @@ class AboutController extends Controller
  
         //  About::create($data);
         //  return redirect()->route('about.index')->with('success', 'About has been created successfully.');
+        // toastr()->success('Your feedback has been submitted.');
         return redirect()->route('about.index')->with('success', 'About has been created successfully.');
      }
 

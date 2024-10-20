@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\http\Controllers\AboutController;
+use App\http\Controllers\ServiceController;
 
 Route::get('/', function () {
     return view('landing-page.home');
@@ -38,8 +39,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     // Define routes for the about table and controller
     Route::resource('about', AboutController::class)->only(['index', 'create', 'store', 'update']);
+    Route::resource('service', ServiceController::class)->only(['index', 'create', 'store', 'update']);
 });
-
 
 
 require __DIR__.'/auth.php';
